@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envrun"
+version = "0.1.0"
+description = "用指定 .env 文件运行命令，支持多文件叠加与变量覆盖"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "eathink" }]
+keywords = ["env", "dotenv", "cli", "process", "devtools"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+envrun = "envrun.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/eathink/envrun"
+
+[tool.setuptools.packages.find]
+where = ["src"]
